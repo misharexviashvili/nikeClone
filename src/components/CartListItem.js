@@ -69,25 +69,30 @@ const styles = StyleSheet.create({
   name: {
     fontWeight: "500",
     fontSize: 18,
+    fontFamily: 'RobotoMedium',
   },
   size: {
     fontSize: 16,
     color: "gray",
+    fontFamily: 'RobotoMedium',
   },
   quantity: {
     marginHorizontal: 10,
     fontWeight: "bold",
     color: "gray",
+    fontFamily: 'RobotoMedium',
   },
   footer: {
     marginTop: "auto",
     flexDirection: "row",
     alignItems: "center",
+    fontFamily: 'RobotoMedium',
   },
   itemTotal: {
     fontSize: 16,
     marginLeft: "auto",
     fontWeight: "500",
+    fontFamily: 'RobotoMedium',
   },
 });
 

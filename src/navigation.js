@@ -24,13 +24,16 @@ const Navigation = () => {
           name="Products"
           component={ProductsScreen}
           options={({ navigation }) => ({
+            headerTitleStyle: { fontFamily: "RobotoMedium" },
             headerRight: () => (
               <Pressable
                 style={{ flexDirection: "row" }}
                 onPress={() => navigation.navigate("Cart")}
               >
                 <FontAwesome5 name="shopping-cart" size={18} color="gray" />
-                <Text style={{ marginLeft: 5, fontWeight: "500" }}>{numberOfItems}</Text>
+                <Text style={{ marginLeft: 5, fontWeight: "500" }}>
+                  {numberOfItems}
+                </Text>
               </Pressable>
             ),
           })}
@@ -40,9 +43,14 @@ const Navigation = () => {
           component={ProductDetailsScreen}
           options={{
             presentation: "modal",
+            headerTitleStyle: { fontFamily: "RobotoMedium" },
           }}
         />
-        <Stack.Screen name="Cart" component={ShoppingCart} />
+        <Stack.Screen
+          name="Cart"
+          component={ShoppingCart}
+          options={{ headerTitleStyle: { fontFamily: "RobotoMedium" } }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
