@@ -3,19 +3,33 @@ import ProductsScreen from "./screens/ProductsScreen";
 import ProductDetailsScreen from "./screens/ProductDetailsScreen";
 import ShoppingCart from "./screens/ShoppingCart";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Pressable } from "react-native";
-
+import { Pressable, Text } from "react-native";
+import { FontAwesome5 } from "@expo/vector-icons";
 const Navigation = () => {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          contentStyle: {
+            backgroundColor: "white",
+          },
+        }}
+      >
         <Stack.Screen
           name="Products"
           component={ProductsScreen}
-          options={{
-            headerRight: () => <Pressable></Pressable>,
-          }}
+          options={({ navigation }) => ({
+            headerRight: () => (
+              <Pressable
+                style={{ flexDirection: "row" }}
+                onPress={() => navigation.navigate("Cart")}
+              >
+                <FontAwesome5 name="shopping-cart" size={18} color="gray" />
+                <Text style={{ marginLeft: 5, fontWeight: "500" }}>1</Text>
+              </Pressable>
+            ),
+          })}
         />
         <Stack.Screen
           name="Product Details"
