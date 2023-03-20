@@ -33,7 +33,9 @@ const ShoppingCart = () => {
         renderItem={({ item }) => <CartListItem cartItem={item} />}
         ListFooterComponent={shoppingCartTotal}
       />
-      <Pressable  style={({ pressed }) => [styles.button, pressed && styles.pressed]}>
+      <Pressable
+        style={({ pressed }) => [styles.button, pressed && styles.pressed]}
+      >
         <Text style={styles.buttonText}>Checkout</Text>
       </Pressable>
     </Fragment>
@@ -57,12 +59,12 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 16,
     color: "gray",
-    fontFamily: 'RobotoMedium',
+    fontFamily: "RobotoMedium",
   },
   textBold: {
     fontSize: 16,
     fontWeight: "500",
-    fontFamily: 'RobotoMedium',
+    fontFamily: "RobotoMedium",
   },
   button: {
     position: "absolute",
@@ -78,9 +80,9 @@ const styles = StyleSheet.create({
     color: "white",
     fontWeight: "500",
     fontSize: 16,
-    fontFamily: 'RobotoMedium',
+    fontFamily: "RobotoMedium",
   },
   pressed: {
-    backgroundColor:'#444',
+    backgroundColor: "#444",
   },
 });
