@@ -20,7 +20,10 @@ export default function ProductDetailsScreen() {
   };
   return (
     <View>
-      <ScrollView style={styles.scrollView}>
+      <ScrollView
+        style={styles.scrollView}
+        showsVerticalScrollIndicator={false}
+      >
         <FlatList
           data={product.images}
           horizontal
@@ -49,7 +52,7 @@ export default function ProductDetailsScreen() {
 
 const styles = StyleSheet.create({
   scrollView: {
-    marginBottom: 80,
+    marginBottom: 60,
   },
   title: {
     fontSize: 34,
@@ -87,6 +90,6 @@ const styles = StyleSheet.create({
     fontFamily: "RobotoMedium",
   },
   pressed: {
-    backgroundColor:'#444',
+    backgroundColor: "#444",
   },
 });

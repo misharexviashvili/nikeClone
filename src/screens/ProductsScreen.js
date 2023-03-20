@@ -9,6 +9,7 @@ const ProductsScreen = ({ navigation }) => {
     <FlatList
       data={products}
       numColumns={2}
+      showsVerticalScrollIndicator={false}
       renderItem={({ item }) => (
         <Pressable
           style={styles.itemContainer}
