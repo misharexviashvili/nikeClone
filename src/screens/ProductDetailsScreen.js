@@ -20,7 +20,7 @@ export default function ProductDetailsScreen() {
   };
   return (
     <View>
-      <ScrollView>
+      <ScrollView style={styles.scrollView}>
         <FlatList
           data={product.images}
           horizontal
@@ -37,7 +37,10 @@ export default function ProductDetailsScreen() {
           <Text style={styles.description}>{product.description}</Text>
         </View>
       </ScrollView>
-      <Pressable style={styles.button} onPress={addToCart}>
+      <Pressable
+        style={({ pressed }) => [styles.button, pressed && styles.pressed]}
+        onPress={addToCart}
+      >
         <Text style={styles.buttonText}>Add to cart</Text>
       </Pressable>
     </View>
@@ -45,29 +48,32 @@ export default function ProductDetailsScreen() {
 }
 
 const styles = StyleSheet.create({
+  scrollView: {
+    marginBottom: 80,
+  },
   title: {
     fontSize: 34,
     fontWeight: "500",
     marginVertical: 10,
-    fontFamily: 'RobotoMedium',
+    fontFamily: "RobotoMedium",
   },
   price: {
     fontWeight: "500",
     fontSize: 16,
     letterSpacing: 1.5,
-    fontFamily: 'RobotoMedium',
+    fontFamily: "RobotoMedium",
   },
   description: {
     marginVertical: 10,
     fontSize: 18,
     lineHeight: 30,
     fontWeight: "300",
-    fontFamily: 'RobotoMedium',
+    fontFamily: "RobotoMedium",
   },
   button: {
     position: "absolute",
     backgroundColor: "black",
-    bottom: 30,
+    bottom: 20,
     width: "90%",
     alignSelf: "center",
     padding: 20,
@@ -78,6 +84,9 @@ const styles = StyleSheet.create({
     color: "white",
     fontWeight: "500",
     fontSize: 16,
-    fontFamily: 'RobotoMedium',
+    fontFamily: "RobotoMedium",
+  },
+  pressed: {
+    backgroundColor:'#444',
   },
 });
