@@ -49,17 +49,20 @@ const styles = StyleSheet.create({
     fontSize: 34,
     fontWeight: "500",
     marginVertical: 10,
+    fontFamily: 'RobotoMedium',
   },
   price: {
     fontWeight: "500",
     fontSize: 16,
     letterSpacing: 1.5,
+    fontFamily: 'RobotoMedium',
   },
   description: {
     marginVertical: 10,
     fontSize: 18,
     lineHeight: 30,
     fontWeight: "300",
+    fontFamily: 'RobotoMedium',
   },
   button: {
     position: "absolute",
@@ -75,5 +78,6 @@ const styles = StyleSheet.create({
     color: "white",
     fontWeight: "500",
     fontSize: 16,
+    fontFamily: 'RobotoMedium',
   },
 });

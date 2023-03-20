@@ -57,10 +57,12 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 16,
     color: "gray",
+    fontFamily: 'RobotoMedium',
   },
   textBold: {
     fontSize: 16,
     fontWeight: "500",
+    fontFamily: 'RobotoMedium',
   },
   button: {
     position: "absolute",
@@ -76,5 +78,6 @@ const styles = StyleSheet.create({
     color: "white",
     fontWeight: "500",
     fontSize: 16,
+    fontFamily: 'RobotoMedium',
   },
 });
